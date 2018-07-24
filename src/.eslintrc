@@ -4,6 +4,9 @@
   "parserOptions": {
     "ecmaVersion": 6
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "max-len": [2, 140, 2, {
       "ignoreUrls": true,

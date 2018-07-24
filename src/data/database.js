@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 const {
   database: {
-    host, user, password, dialect, database,
-  },
+ host, user, password, dialect, database 
+},
 } = require('../config');
 const { model } = require('./model');
 
@@ -11,7 +11,6 @@ module.exports = async () => {
     host,
     dialect,
   });
-
 
   const test = model(sequelize);
 
@@ -25,10 +24,12 @@ module.exports = async () => {
     }
   });
 
-  await sequelize.sync({
-    force: false,
-    logging: process.env.NODE_ENV !== 'test',
-  }).catch(console.error);
+  await sequelize
+    .sync({
+      force: false,
+      logging: process.env.NODE_ENV !== 'test',
+    })
+    .catch(console.error);
 
   return {
     Sequelize,
