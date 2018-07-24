@@ -25,7 +25,8 @@ class Controller {
 
   async update(req, res, next) {
     const { body, params } = req;
-    const result = await this.model.update(params.id, body);
+    const updateResult = await this.model.update(body, { where: { id: params.id } });
+    const result = await this.model.findById(Number(params.id));
     res.send(result);
     next();
   }
