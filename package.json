@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/index.js",
-    "lint": "eslint",
-    "seed": "node src/data/seed.js"
+    "lint": "eslint . --cache",
+    "seed": "node src/data/seed.js",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [
     "node"
@@ -25,8 +26,16 @@
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
     "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-config-standard": "^11.0.0"
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-react": "^7.10.0"
   }
 }
