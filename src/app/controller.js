@@ -25,7 +25,7 @@ class Controller {
 
   async update(req, res, next) {
     const { body, params } = req;
-    const updateResult = await this.model.update(body, { where: { id: params.id } });
+    const updateResult = await this.model.update(body, { where: { id: Number(params.id) } });
     const result = await this.model.findById(Number(params.id));
     res.send(result);
     next();
@@ -33,9 +33,8 @@ class Controller {
 
   async delete(req, res, next) {
     const { params } = req;
-    const model = await this.model.findById(Number(params.id));
-    const result = await this.model.destroy(model);
-    res.send(result);
+    const result = await this.model.destroy({ where: { id: Number(params.id) } });
+    res.sendStatus(204)
     next();
   }
 }
