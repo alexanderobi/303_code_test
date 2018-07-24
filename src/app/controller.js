@@ -1,6 +1,7 @@
 
 class Controller {
     constructor(model) {
+        console.log(model)
         this.model = model
     }
 

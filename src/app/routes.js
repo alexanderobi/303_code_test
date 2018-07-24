@@ -1,7 +1,6 @@
 const Controller = require('./controller');
 
 module.exports = ({ router, model }) => {
-    console.log(model)
     const controller = new Controller(model);
 
     router.post('/', controller.create);
