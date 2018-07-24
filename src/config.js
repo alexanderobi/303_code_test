@@ -1,5 +1,9 @@
-
-const { MYSQL_PORT_3306_TCP_ADDR, MYSQL_DATABASE, MYSQL_PORT_3306_TCP_PORT, MYSQL_ENV_MYSQL_ROOT_PASSWORD } = process.env
+const {
+  MYSQL_PORT_3306_TCP_ADDR,
+  MYSQL_DATABASE,
+  MYSQL_PORT_3306_TCP_PORT,
+  MYSQL_ENV_MYSQL_ROOT_PASSWORD,
+} = process.env;
 
 const host = MYSQL_PORT_3306_TCP_ADDR || 'localhost';
 const user = 'root';
@@ -14,6 +18,7 @@ module.exports = {
     user,
     password,
     dialect,
-    database, port
+    database,
+    port,
   },
 };
