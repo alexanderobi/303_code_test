@@ -7,10 +7,7 @@ const {
 const { model } = require('./model');
 
 module.exports = async () => {
-  const sequelize = new Sequelize(database, user, password, {
-    host,
-    dialect,
-  });
+  const sequelize = new Sequelize(database, user, password, { host, dialect });
 
   const test = model(sequelize);
 

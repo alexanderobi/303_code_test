@@ -9,6 +9,6 @@ const stub = () => ({
 
 initData().then(async ({ models: { test } }) => {
   await Promise.all[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(x => test.create(stub()))];
-  console.log( "\nSeeding done!" );
+  console.log('\nSeeding done!');
   process.exit(0);
 });
