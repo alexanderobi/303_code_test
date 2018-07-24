@@ -8,6 +8,14 @@ const model = (sequelize) => sequelize.define('test', {
     content: Sequelize.STRING,
 });
 
+const stub = {
+    title: faker.name.title(),
+    author: `${faker.name.firstName()} ${faker.name.firstName()}`,
+    content: faker.lorem.paragraph(),
+};
+
+
 module.exports = {
     model,
+    stub,
 };
