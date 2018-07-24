@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize');
 const {
   database: {
- host, user, password, dialect, database 
+ host, user, password, dialect, database, port
 },
 } = require('../config');
 const { model } = require('./model');
 
 module.exports = async () => {
-  const sequelize = new Sequelize(database, user, password, { host, dialect });
+  const sequelize = new Sequelize(database, user, password, { host, port, dialect });
 
   const test = model(sequelize);
 
