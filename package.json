@@ -1,0 +1,30 @@
+{
+  "name": "303codetest",
+  "version": "1.0.0",
+  "description": "303 code test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Alexander Obi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eslint": "^5.2.0",
+    "express": "^4.16.3",
+    "faker": "^4.1.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.18.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0"
+  }
+}
