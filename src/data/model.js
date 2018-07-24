@@ -1,5 +1,4 @@
 const { Sequelize } = require('sequelize');
-const faker = require('faker');
 
 const model = (sequelize) => sequelize.define('test', {
     title: Sequelize.STRING,
@@ -8,14 +7,7 @@ const model = (sequelize) => sequelize.define('test', {
     content: Sequelize.STRING,
 });
 
-const stub = {
-    title: faker.name.title(),
-    author: `${faker.name.firstName()} ${faker.name.firstName()}`,
-    content: faker.lorem.paragraph(),
-};
-
 
 module.exports = {
     model,
-    stub,
 };
